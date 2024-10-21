@@ -2,15 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:title="Opcion1"
-        android:id="opc1"
+        android:id="@+id/fragmentoLauncher"
 
         />
     <item android:title="Opcion2"
-        android:id="opc2"
+        android:id="@+id/fragmentoInfo"
 
         />
     <item android:title="Opcion3"
-        android:id="opc3"
+        android:id="@+id/fragmentoRandom"
 
         />
 </menu>
