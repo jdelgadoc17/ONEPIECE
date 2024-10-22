@@ -16,7 +16,6 @@ import com.example.onepiece.databinding.FragmentFragmentoPiratasBinding;
 public class FragmentoPiratas extends Fragment {
     FragmentFragmentoPiratasBinding binding;
     public FragmentoPiratas() {
-        // Required empty public constructor
     }
 
 
