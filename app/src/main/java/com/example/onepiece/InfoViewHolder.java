@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.onepiece.databinding.ItemPersonajeBinding;
 
-public class InfoViewHolder extends RecyclerView.ViewHolder  {
+public static class InfoViewHolder extends RecyclerView.ViewHolder  {
 
     ItemPersonajeBinding binding;
 
@@ -13,6 +13,8 @@ public class InfoViewHolder extends RecyclerView.ViewHolder  {
         super(binding.getRoot());
         this.binding = binding;
     }
+
+
 
 
 }

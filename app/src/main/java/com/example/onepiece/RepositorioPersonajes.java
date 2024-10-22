@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class RepositorioPersonajes {
 
-    private ArrayList<Personaje> personajes;
+    public static ArrayList<Personaje> personajes;
 
     public RepositorioPersonajes(ArrayList<Personaje> lista_personajes) {
         lista_personajes = new ArrayList<Personaje>();
