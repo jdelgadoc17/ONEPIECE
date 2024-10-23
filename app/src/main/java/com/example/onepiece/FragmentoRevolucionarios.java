@@ -45,12 +45,12 @@ public class FragmentoRevolucionarios extends Fragment {
 
 
         RepositorioPersonajes repo = new RepositorioPersonajes();
-        ArrayList<Personaje> lista = repo.getRevolucionarios();
+        ArrayList<Personaje> lista = repo.getLista_revolucionarios();
 
         GridLayoutManager grid = new GridLayoutManager(getContext(), 1);
         binding.recycRevolucionarios.setLayoutManager(grid);
 
-        marinesAdapter adapter = new marinesAdapter(lista);
+        revolucionariosAdapter adapter = new revolucionariosAdapter(lista);
         binding.recycRevolucionarios.setAdapter(adapter);
     }
 }
