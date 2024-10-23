@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Opcion1"
+    <item android:title="Personajes"
         android:id="@+id/fragmentoLauncher"
 
         />
-    <item android:title="Opcion2"
+    <item android:title="Info"
         android:id="@+id/fragmentoInfo"
 
         />
-    <item android:title="Opcion3"
+    <item android:title="Random"
         android:id="@+id/fragmentoRandom"
 
         />
