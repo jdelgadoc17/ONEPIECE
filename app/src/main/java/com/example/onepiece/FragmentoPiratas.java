@@ -48,14 +48,14 @@ public class FragmentoPiratas extends Fragment {
 
         //COGEMOS LA INFO
         RepositorioPersonajes repo = new RepositorioPersonajes();
-        ArrayList<Personaje> listapiratas = repo.getPiratas();
+        ArrayList<Personaje> listapiratas = repo.getLista_piratas();
 
         //HACEMOS EL GRID
         GridLayoutManager grid = new GridLayoutManager(getContext(), 1);
         binding.recycPiratas.setLayoutManager(grid);
 
         //COGEMOS EL ADAPTER
-        InfoAdapter adapter = new InfoAdapter(listapiratas);
+        piratasAdapter adapter = new piratasAdapter(listapiratas);
         binding.recycPiratas.setAdapter(adapter);
     }
 }

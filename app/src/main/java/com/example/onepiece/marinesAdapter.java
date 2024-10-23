@@ -10,11 +10,11 @@ import com.example.onepiece.databinding.ItemPersonajeBinding;
 
 import java.util.ArrayList;
 
-public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.InfoViewHolder> {
+public class marinesAdapter extends RecyclerView.Adapter<marinesAdapter.InfoViewHolder> {
 
     private ArrayList<Personaje> lista_personajes;
 
-    public InfoAdapter(ArrayList<Personaje> lista_personajes) {
+    public marinesAdapter(ArrayList<Personaje> lista_personajes) {
         this.lista_personajes = lista_personajes;
     }
 
@@ -28,17 +28,25 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.InfoViewHolder
     @Override
     public void onBindViewHolder(@NonNull InfoViewHolder holder, int position) {
 
-        Personaje personaje = RepositorioPersonajes.personajes.get(position);
-        holder.binding.nombreTextView.setText(personaje.getNombre()); //nombre
-        holder.binding.recompensaTextView.setText(String.valueOf(personaje.getRecompensa())); // recompensa
-        holder.binding.rolTextView.setText(personaje.getRol()); //rol
+        Personaje personaje = RepositorioPersonajes.lista_marines.get(position);
+        holder.binding.nombreTextView.setText(personaje.getNombre());
+        holder.binding.recompensaTextView.setText(String.valueOf(personaje.getRecompensa())); // hay que parsear el int a un string
+        holder.binding.rolTextView.setText(personaje.getRol());
+
+
+
+
+
+
+
 
 
     }
 
     @Override
     public int getItemCount() {
-        return RepositorioPersonajes.personajes.size();
+
+        return RepositorioPersonajes.lista_marines.size();
     }
 
     //VIEWHOLDER
