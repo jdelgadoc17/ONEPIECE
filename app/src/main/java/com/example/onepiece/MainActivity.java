@@ -1,5 +1,6 @@
 package com.example.onepiece;
 
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -28,11 +29,15 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = binding.toolbar;
         setSupportActionBar(toolbar);
         toolbar.setTitle("ONE PIECE");
+        toolbar.setTitleTextColor(getResources().getColor(R.color.white));
+        toolbar.setBackground(new ColorDrawable(getResources().getColor(R.color.blueOnePiece)));
+        //TOOLBAR END
 
         //BARRA INFERIOR
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(binding.navigationHost.getId());
         NavController navController = navHostFragment.getNavController();
         NavigationUI.setupWithNavController(binding.menuInferior, navController);
+        //BARRA INFERIOR END
 
 
 

@@ -55,7 +55,7 @@ public class FragmentoPiratas extends Fragment {
         binding.recycPiratas.setLayoutManager(grid);
 
         //COGEMOS EL ADAPTER
-        piratasAdapter adapter = new piratasAdapter(listapiratas);
+        AdapterPiratas adapter = new AdapterPiratas(listapiratas);
         binding.recycPiratas.setAdapter(adapter);
     }
 }

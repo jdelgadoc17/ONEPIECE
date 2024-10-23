@@ -50,7 +50,7 @@ public class FragmentoRevolucionarios extends Fragment {
         GridLayoutManager grid = new GridLayoutManager(getContext(), 1);
         binding.recycRevolucionarios.setLayoutManager(grid);
 
-        revolucionariosAdapter adapter = new revolucionariosAdapter(lista);
+        AdapterRevolucionarios adapter = new AdapterRevolucionarios(lista);
         binding.recycRevolucionarios.setAdapter(adapter);
     }
 }

@@ -49,7 +49,7 @@ public class FragmentoMarines extends Fragment {
         binding.recycMarines.setLayoutManager(grid);
 
 
-        marinesAdapter adapter = new marinesAdapter(lista);
+        AdapterMarines adapter = new AdapterMarines(lista);
         binding.recycMarines.setAdapter(adapter);
     }
 }
