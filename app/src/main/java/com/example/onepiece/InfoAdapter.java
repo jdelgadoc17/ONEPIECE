@@ -25,6 +25,7 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.InfoViewHolder
         holder.binding.recompensaTextView.setText(personaje.getRecompensa()); // recompensa
         holder.binding.rolTextView.setText(personaje.getRol()); //rol
 
+
     }
 
     @Override
