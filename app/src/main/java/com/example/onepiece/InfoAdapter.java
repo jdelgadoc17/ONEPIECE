@@ -8,7 +8,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.onepiece.databinding.ItemPersonajeBinding;
 
+import java.util.ArrayList;
+
 public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.InfoViewHolder> {
+
+    private ArrayList<Personaje> lista_personajes;
+
+    public InfoAdapter(ArrayList<Personaje> lista_personajes) {
+        this.lista_personajes = lista_personajes;
+    }
 
 
     @NonNull
@@ -22,7 +30,7 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.InfoViewHolder
 
         Personaje personaje = RepositorioPersonajes.personajes.get(position);
         holder.binding.nombreTextView.setText(personaje.getNombre()); //nombre
-        holder.binding.recompensaTextView.setText(personaje.getRecompensa()); // recompensa
+        holder.binding.recompensaTextView.setText(String.valueOf(personaje.getRecompensa())); // recompensa
         holder.binding.rolTextView.setText(personaje.getRol()); //rol
 
 
