@@ -6,13 +6,15 @@ public class Personaje {
     private String rol;
     private int recompensa;
     private String frutaDelDiablo;
+    private String descripcion;
 
     // Constructor
-    public Personaje(String nombre, String rol, int recompensa, String frutaDelDiablo) {
+    public Personaje(String nombre, String rol, int recompensa, String frutaDelDiablo, String descripcion) {
         this.nombre = nombre;
         this.rol = rol;
         this.recompensa = recompensa;
         this.frutaDelDiablo = frutaDelDiablo;
+        this.descripcion = descripcion;
     }
 
     // Getters y Setters
@@ -46,6 +48,14 @@ public class Personaje {
 
     public void setFrutaDelDiablo(String frutaDelDiablo) {
         this.frutaDelDiablo = frutaDelDiablo;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     // Método para mostrar información del personaje
