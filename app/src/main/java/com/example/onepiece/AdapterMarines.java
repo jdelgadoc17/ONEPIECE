@@ -25,6 +25,7 @@ public class AdapterMarines extends RecyclerView.Adapter<AdapterMarines.InfoView
         return new InfoViewHolder(ItemPersonajeBinding.inflate(LayoutInflater.from(parent.getContext())));
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull InfoViewHolder holder, int position) {
 
