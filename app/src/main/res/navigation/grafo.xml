@@ -11,13 +11,31 @@
         android:label="fragment_fragmento_launcher"
         tools:layout="@layout/fragment_fragmento_launcher" />
     <fragment
-        android:id="@+id/fragmentoInfo2"
+        android:id="@+id/fragmentoInfo"
         android:name="com.example.onepiece.FragmentoInfo"
         android:label="fragment_fragmento_info"
         tools:layout="@layout/fragment_fragmento_info" />
+    <action
+        android:id="@+id/action_fragmentoInfo_to_fragmentoPiratas"
+        app:destination="@id/fragmentoPiratas" />
     <fragment
         android:id="@+id/fragmentoRandom2"
         android:name="com.example.onepiece.FragmentoRandom"
         android:label="fragment_fragmento_random"
         tools:layout="@layout/fragment_fragmento_random" />
+    <fragment
+        android:id="@+id/fragmentoMarines"
+        android:name="com.example.onepiece.FragmentoMarines"
+        android:label="fragment_fragmento_marines"
+        tools:layout="@layout/fragment_fragmento_marines" />
+    <fragment
+        android:id="@+id/fragmentoPiratas"
+        android:name="com.example.onepiece.FragmentoPiratas"
+        android:label="fragment_fragmento_piratas"
+        tools:layout="@layout/fragment_fragmento_piratas" />
+    <fragment
+        android:id="@+id/fragmentoRevolucionarios"
+        android:name="com.example.onepiece.FragmentoRevolucionarios"
+        android:label="fragment_fragmento_revolucionarios"
+        tools:layout="@layout/fragment_fragmento_revolucionarios" />
 </navigation>

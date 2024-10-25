@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Opcion1"
+    <item android:title="Personajes"
         android:id="@+id/fragmentoLauncher"
+        android:icon="@drawable/luffy_hat"
+
 
         />
-    <item android:title="Opcion2"
-        android:id="@+id/fragmentoInfo"
+    <item android:title="Favoritos"
+        android:id="@+id/fragmentoFavoritos"
+        android:icon="@drawable/img_star"
 
         />
-    <item android:title="Opcion3"
+    <item android:title="Random"
         android:id="@+id/fragmentoRandom"
 
         />

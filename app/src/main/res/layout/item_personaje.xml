@@ -41,6 +41,12 @@
             android:layout_height="wrap_content"
             android:text="Recompensa" />
 
+        <TextView
+            android:id="@+id/descripcionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descripcion" />
+
     </LinearLayout>
 
 </LinearLayout>
