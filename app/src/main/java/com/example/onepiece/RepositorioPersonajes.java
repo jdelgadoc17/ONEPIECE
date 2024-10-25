@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class RepositorioPersonajes {
 
-    private ArrayList<Personaje> personajes;
+    public static ArrayList<Personaje> personajes;
 
     public RepositorioPersonajes(ArrayList<Personaje> lista_personajes) {
         lista_personajes = new ArrayList<Personaje>();
@@ -74,6 +74,36 @@ public class RepositorioPersonajes {
 
     public void setLista_personajes(ArrayList<Personaje> lista_personajes) {
         this.personajes = lista_personajes;
+    }
+
+    public ArrayList<Personaje> getMarines() {
+        ArrayList<Personaje> marines = new ArrayList<>();
+        for (Personaje personaje : personajes) {
+            if (personaje.getRol().equalsIgnoreCase("Marine") || personaje.getRol().equalsIgnoreCase("Ex-Marine")) {
+                marines.add(personaje);
+            }
+        }
+        return marines;
+    }
+
+    public ArrayList<Personaje> getPiratas() {
+        ArrayList<Personaje> piratas = new ArrayList<>();
+        for (Personaje personaje : personajes) {
+            if (personaje.getRol().equalsIgnoreCase("Pirata")) {
+                piratas.add(personaje);
+            }
+        }
+        return piratas;
+    }
+
+    public ArrayList<Personaje> getRevolucionarios() {
+        ArrayList<Personaje> revolucionarios = new ArrayList<>();
+        for (Personaje personaje : personajes) {
+            if (personaje.getRol().equalsIgnoreCase("TRevolucionarios")) {
+                revolucionarios.add(personaje);
+            }
+        }
+        return revolucionarios;
     }
 
 
