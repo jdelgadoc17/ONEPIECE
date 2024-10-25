@@ -26,6 +26,7 @@ public class AdapterPiratas extends RecyclerView.Adapter<AdapterPiratas.InfoView
         return new InfoViewHolder(ItemPersonajeBinding.inflate(LayoutInflater.from(parent.getContext())));
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull InfoViewHolder holder, int position) {
         //SET
@@ -39,6 +40,8 @@ public class AdapterPiratas extends RecyclerView.Adapter<AdapterPiratas.InfoView
             @Override
             public void onClick(View view) {
                 //ir al fragmento de info detallada de ese personaje
+
+
 
 
             }
