@@ -62,9 +62,8 @@ public class FragmentoInfo extends Fragment {
         binding.buttonBackInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                personajeViewModel.limpiarSeleccion(); // Añade este método en tu ViewModel
-                NavController navController = Navigation.findNavController(view); // Usa el 'view' como contexto
-                //navController.navigate(R.id.action_fragmentoInfo_to_fragmentoPiratas);
+                personajeViewModel.limpiarSeleccion();
+                NavController navController = Navigation.findNavController(view);
                 Log.println(Log.ASSERT, "NO NULL", "IDA A GENERAL");
                 navController.popBackStack();
                 personajeViewModel.limpiarSeleccion();

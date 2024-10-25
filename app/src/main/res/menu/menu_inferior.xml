@@ -3,10 +3,13 @@
 
     <item android:title="Personajes"
         android:id="@+id/fragmentoLauncher"
+        android:icon="@drawable/luffy_hat"
+
 
         />
-    <item android:title="Info"
-        android:id="@+id/fragmentoInfo"
+    <item android:title="Favoritos"
+        android:id="@+id/fragmentoFavoritos"
+        android:icon="@drawable/img_star"
 
         />
     <item android:title="Random"
