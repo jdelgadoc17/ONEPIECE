@@ -51,10 +51,11 @@ public class AdapterMarines extends RecyclerView.Adapter<AdapterMarines.InfoView
             }
         });
 
-        if(personajeViewModel.getListaFavoritos().getValue()!= null && personajeViewModel.getListaFavoritos().getValue().contains(personaje)){
-            holder.binding.favoriteButton.setImageResource(R.drawable.img_star);
-        }else{
-            holder.binding.favoriteButton.setImageResource(R.drawable.luffy_hat);
+        if(personajeViewModel.getListaFavoritos().getValue() != null &&
+                personajeViewModel.getListaFavoritos().getValue().contains(personaje)){
+            holder.binding.favoriteButton.setImageResource(R.drawable.fullstar);
+        } else {
+            holder.binding.favoriteButton.setImageResource(R.drawable.emptystar);
         }
 
         holder.binding.favoriteButton.setOnClickListener(new View.OnClickListener() {
@@ -62,9 +63,9 @@ public class AdapterMarines extends RecyclerView.Adapter<AdapterMarines.InfoView
             public void onClick(View view) {
                 personajeViewModel.toggleFavorito(personaje); // Añade o elimina el personaje de favoritos
                 if (personajeViewModel.getListaFavoritos().getValue().contains(personaje)) {
-                    holder.binding.favoriteButton.setImageResource(R.drawable.img_star);
+                    holder.binding.favoriteButton.setImageResource(R.drawable.fullstar);
                 } else {
-                    holder.binding.favoriteButton.setImageResource(R.drawable.luffy_hat);
+                    holder.binding.favoriteButton.setImageResource(R.drawable.emptystar);
                 }
 
             }
