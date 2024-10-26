@@ -58,6 +58,14 @@ public class Personaje {
         this.descripcion = descripcion;
     }
 
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Personaje personaje = (Personaje) obj;
+        return nombre.equals(personaje.nombre); // O cualquier otro atributo único
+    }
     // Método para mostrar información del personaje
     @Override
     public String toString() {

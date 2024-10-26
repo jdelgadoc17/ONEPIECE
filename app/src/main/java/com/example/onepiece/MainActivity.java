@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     NavController navController;
 
-    private static ArrayList<Personaje> listaFavoritos;
 
 
     @Override

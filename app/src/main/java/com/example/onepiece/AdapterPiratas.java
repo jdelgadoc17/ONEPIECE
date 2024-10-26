@@ -44,11 +44,41 @@ public class AdapterPiratas extends RecyclerView.Adapter<AdapterPiratas.InfoView
                 navController.navigate(R.id.fragmentoInfo); // Navegar al fragmento de info
             }
         });
+
+
+        if(personajeViewModel.getListaFavoritos().getValue()!= null && personajeViewModel.getListaFavoritos().getValue().contains(personaje)){
+            holder.binding.favoriteButton.setImageResource(R.drawable.img_star);
+        }else{
+            holder.binding.favoriteButton.setImageResource(R.drawable.img_star);
+        }
+
+        holder.binding.favoriteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                personajeViewModel.toggleFavorito(personaje); // Añade o elimina el personaje de favoritos
+                if (personajeViewModel.getListaFavoritos().getValue().contains(personaje)) {
+                    holder.binding.favoriteButton.setImageResource(R.drawable.img_star);
+                } else {
+                    holder.binding.favoriteButton.setImageResource(R.drawable.luffy_hat);
+                }
+
+            }
+        });
+
+
     }
+
+
+
 
     @Override
     public int getItemCount() {
         return lista_personajes.size();
+    }
+
+
+    public void setListaPersonajes(ArrayList<Personaje> listaPersonajes) {
+        this.lista_personajes = listaPersonajes;
     }
 
     // VIEWHOLDER

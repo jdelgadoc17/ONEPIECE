@@ -77,23 +77,7 @@ public class FragmentoPiratas extends Fragment {
         binding.recycPiratas.setLayoutManager(new GridLayoutManager(getContext(), 1));
         binding.recycPiratas.setAdapter(adapter);
 
-        /*personajeViewModel.getPersonajeSeleccionado().observe(getViewLifecycleOwner(), personaje -> {
-            if (personaje != null) {
-                Log.println(Log.ASSERT, "NO NULL", "ID A INFO");
-                NavController navController = Navigation.findNavController(view);
-                navController.navigate(R.id.fragmentoInfo);
-            } else {
-                Log.println(Log.ASSERT, "NULL", "NULL");
-            }
-        });*/
 
-        /*personajeViewModel.debeNavegar.observe(getViewLifecycleOwner(), debeNavegar -> {
-            if (debeNavegar) {
-                NavController navController = Navigation.findNavController(view);
-                navController.navigate(R.id.fragmentoInfo);
-                personajeViewModel.debeNavegar.setValue(false); // Resetea la variable
-            }
-        });*/
 
 
 
