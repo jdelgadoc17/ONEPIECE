@@ -53,7 +53,11 @@ public class FragmentoInfo extends Fragment {
             if (personaje != null) {
                 // Aquí puedes configurar la vista con los detalles del personaje
                 binding.nombreTextView.setText(personaje.getNombre());
-                binding.recompensaInfo.setText(String.valueOf(personaje.getRecompensa()));
+                if(personaje.getRecompensa()!=0){
+                    binding.recompensaInfo.setText("Recompensa: "+String.valueOf(personaje.getRecompensa()+ " millones de berries"));
+                }else{
+                    binding.recompensaInfo.setText("Sin recompensa");
+                }
                 binding.rolInfo.setText(personaje.getRol());
                 binding.descripcionInfo.setText(personaje.getDescripcion());
                 binding.imgInfo.setImageResource(personaje.getImage());
@@ -65,7 +69,6 @@ public class FragmentoInfo extends Fragment {
             public void onClick(View view) {
                 personajeViewModel.limpiarSeleccion();
                 NavController navController = Navigation.findNavController(view);
-                Log.println(Log.ASSERT, "NO NULL", "IDA A GENERAL");
                 navController.popBackStack();
                 personajeViewModel.limpiarSeleccion();
 

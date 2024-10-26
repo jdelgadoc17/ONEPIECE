@@ -7,31 +7,24 @@
 
     <TextView
         android:id="@+id/descripcionInfo"
-        android:layout_width="161dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="32dp"
-        android:text="TextView"
+        android:layout_width="268dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="44dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frutaInfo" />
-
-    <TextView
-        android:id="@+id/frutaInfo"
-        android:layout_width="161dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="24dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.643"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recompensaInfo" />
 
     <TextView
         android:id="@+id/recompensaInfo"
-        android:layout_width="161dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="20dp"
-        android:text="TextView"
+        android:layout_width="227dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="28dp"
+        android:textSize="25dp"
+
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.581"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rolInfo" />
 
@@ -47,21 +40,24 @@
 
     <TextView
         android:id="@+id/nombreTextView"
-        android:layout_width="135dp"
-        android:layout_height="59dp"
+        android:layout_width="220dp"
+        android:layout_height="53dp"
         android:layout_marginTop="36dp"
-        android:text="TextView"
+        android:textSize="45dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/rolInfo"
-        android:layout_width="161dp"
-        android:layout_height="51dp"
+        android:layout_width="186dp"
+        android:layout_height="58dp"
         android:layout_marginTop="28dp"
         android:text="TextView"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgInfo" />
 

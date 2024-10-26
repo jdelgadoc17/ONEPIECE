@@ -2,6 +2,7 @@ package com.example.onepiece;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 
 import androidx.activity.EdgeToEdge;
@@ -56,9 +57,10 @@ public class MainActivity extends AppCompatActivity {
                     navController.navigate(R.id.fragmentoLauncher);
 
                 }else if(item.getItemId() == R.id.fragmentoFavoritos){
+
                     navController.navigate(R.id.fragmentoFavoritos);
                 }else if(item.getItemId() == R.id.fragmentoRandom){
-                    navController.navigate(R.id.fragmentoRandom);
+                    navController.navigate(R.id.fragmentoRandom2);
                 }
                 return true;
 
