@@ -41,29 +41,8 @@ public class FragmentoPiratas extends Fragment {
         binding = FragmentFragmentoPiratasBinding.inflate(getLayoutInflater());
         return binding.getRoot();
 
-
-
-
     }
 
-    /*@Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        personajeViewModel = new ViewModelProvider(requireActivity()).get(PersonajeViewModel.class);
-
-        //COGEMOS LA INFO
-        RepositorioPersonajes repo = new RepositorioPersonajes();
-        ArrayList<Personaje> listapiratas = repo.getLista_piratas();
-
-        //HACEMOS EL GRID
-        GridLayoutManager grid = new GridLayoutManager(getContext(), 1);
-        binding.recycPiratas.setLayoutManager(grid);
-
-        //COGEMOS EL ADAPTER
-        AdapterPiratas adapter = new AdapterPiratas(listapiratas);
-        binding.recycPiratas.setAdapter(adapter);
-    }*/
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
