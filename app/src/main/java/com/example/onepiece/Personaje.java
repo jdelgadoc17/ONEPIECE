@@ -7,14 +7,16 @@ public class Personaje {
     private int recompensa;
     private String frutaDelDiablo;
     private String descripcion;
+    private int image;
 
     // Constructor
-    public Personaje(String nombre, String rol, int recompensa, String frutaDelDiablo, String descripcion) {
+    public Personaje(String nombre, String rol, int recompensa, String frutaDelDiablo, String descripcion, int image) {
         this.nombre = nombre;
         this.rol = rol;
         this.recompensa = recompensa;
         this.frutaDelDiablo = frutaDelDiablo;
         this.descripcion = descripcion;
+        this.image = image;
     }
 
     // Getters y Setters
@@ -58,6 +60,13 @@ public class Personaje {
         this.descripcion = descripcion;
     }
 
+    public int getImage() {
+        return image;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
+    }
 
     @Override
     public boolean equals(Object obj) {
@@ -66,12 +75,16 @@ public class Personaje {
         Personaje personaje = (Personaje) obj;
         return nombre.equals(personaje.nombre); // O cualquier otro atributo único
     }
-    // Método para mostrar información del personaje
+
     @Override
     public String toString() {
-        return "Nombre: " + nombre + "\n" +
-                "Rol: " + rol + "\n" +
-                "Recompensa: " + recompensa + " millones de berries\n" +
-                "Fruta del Diablo: " + frutaDelDiablo;
+        return "Personaje{" +
+                "nombre='" + nombre + '\'' +
+                ", rol='" + rol + '\'' +
+                ", recompensa=" + recompensa +
+                ", frutaDelDiablo='" + frutaDelDiablo + '\'' +
+                ", descripcion='" + descripcion + '\'' +
+                ", image='" + image + '\'' +
+                '}';
     }
 }

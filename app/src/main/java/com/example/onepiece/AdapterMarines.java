@@ -40,6 +40,7 @@ public class AdapterMarines extends RecyclerView.Adapter<AdapterMarines.InfoView
         holder.binding.recompensaTextView.setText(String.valueOf(personaje.getRecompensa())); // hay que parsear el int a un string
         holder.binding.rolTextView.setText(personaje.getRol());
         holder.binding.descripcionTextView.setText(personaje.getDescripcion());
+        holder.binding.personajeImageView.setImageResource(personaje.getImage());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

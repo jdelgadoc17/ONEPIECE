@@ -30,12 +30,6 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/rolTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rol" />
-
-        <TextView
             android:id="@+id/recompensaTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,11 +42,17 @@
             android:text="Descripcion" />
     </LinearLayout>
 
-    <!-- Botón de favorito -->
-    <ImageButton
-        android:id="@+id/favoriteButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/img_star" />
+    <!-- Texto del rol alineado a la derecha y en grande -->
+    <TextView
+        android:id="@+id/rolTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Rol"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginStart="8dp" />
+
+
 
 </LinearLayout>

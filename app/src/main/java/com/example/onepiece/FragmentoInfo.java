@@ -56,6 +56,7 @@ public class FragmentoInfo extends Fragment {
                 binding.recompensaInfo.setText(String.valueOf(personaje.getRecompensa()));
                 binding.rolInfo.setText(personaje.getRol());
                 binding.descripcionInfo.setText(personaje.getDescripcion());
+                binding.imgInfo.setImageResource(personaje.getImage());
             }
         });
 

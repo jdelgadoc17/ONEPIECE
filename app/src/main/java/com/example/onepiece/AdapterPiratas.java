@@ -1,4 +1,5 @@
 package com.example.onepiece;
+import com.bumptech.glide.Glide;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,6 +36,9 @@ public class AdapterPiratas extends RecyclerView.Adapter<AdapterPiratas.InfoView
         holder.binding.recompensaTextView.setText(String.valueOf(personaje.getRecompensa()));
         holder.binding.rolTextView.setText(personaje.getRol());
         holder.binding.descripcionTextView.setText(personaje.getDescripcion());
+
+        holder.binding.personajeImageView.setImageResource(personaje.getImage());
+
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

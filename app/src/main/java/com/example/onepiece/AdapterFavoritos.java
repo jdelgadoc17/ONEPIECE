@@ -1,16 +1,18 @@
 package com.example.onepiece;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.onepiece.databinding.ItemPersonajeBinding;
+import com.example.onepiece.databinding.ItemPersonajeFavBinding;
 
 import java.util.ArrayList;
 
 public class AdapterFavoritos extends RecyclerView.Adapter<AdapterFavoritos.FavoritoViewHolder> {
+
     ArrayList<Personaje> listaFavoritos;
     private PersonajeViewModel personajeViewModel;
 
@@ -22,7 +24,7 @@ public class AdapterFavoritos extends RecyclerView.Adapter<AdapterFavoritos.Favo
     @NonNull
     @Override
     public AdapterFavoritos.FavoritoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new FavoritoViewHolder(ItemPersonajeBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
+        return new FavoritoViewHolder(ItemPersonajeFavBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
     }
 
     @Override
@@ -32,6 +34,7 @@ public class AdapterFavoritos extends RecyclerView.Adapter<AdapterFavoritos.Favo
          holder.binding.recompensaTextView.setText(String.valueOf(personaje.getRecompensa()));
          holder.binding.rolTextView.setText(personaje.getRol());
          holder.binding.descripcionTextView.setText(personaje.getDescripcion());
+         holder.binding.personajeImageView.setImageResource(personaje.getImage());
 
          // Añadir click listener para el botón de eliminar
 
@@ -58,9 +61,9 @@ public class AdapterFavoritos extends RecyclerView.Adapter<AdapterFavoritos.Favo
     //VIEWHOLDER, CADA ITEM
 
     public static class FavoritoViewHolder extends RecyclerView.ViewHolder {
-        ItemPersonajeBinding binding;
+        ItemPersonajeFavBinding binding;
 
-        public FavoritoViewHolder(@NonNull ItemPersonajeBinding binding) {
+        public FavoritoViewHolder(@NonNull ItemPersonajeFavBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
         }
