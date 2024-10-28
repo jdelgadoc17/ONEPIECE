@@ -6,6 +6,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import android.view.LayoutInflater;
@@ -80,6 +82,17 @@ public class FragmentoLauncher extends Fragment {
                 }
             }
         }).attach();
+
+        /*PersonajeViewModel personajeViewModel;
+        personajeViewModel = new ViewModelProvider(requireActivity()).get(PersonajeViewModel.class);
+        personajeViewModel.getPersonajeSeleccionado().observe(getViewLifecycleOwner(), personaje -> {
+            if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+                FragmentManager fragmentManager = getParentFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.infoFragmentContainer, new FragmentoInfo())
+                        .commit();
+            }
+        });*/
 
     }//ONVIEWCREATED END
 

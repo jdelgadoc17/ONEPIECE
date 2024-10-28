@@ -43,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setBackground(new ColorDrawable(getResources().getColor(R.color.blueOnePiece)));
         //TOOLBAR END
 
+
+
+
+
         //BARRA INFERIOR
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(binding.navigationHost.getId());
         NavController navController = navHostFragment.getNavController();
@@ -66,9 +70,10 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
         //BARRA INFERIOR END
+
+
+
 
 
 

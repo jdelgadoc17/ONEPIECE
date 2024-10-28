@@ -8,7 +8,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -17,36 +16,36 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
 
+
     <LinearLayout
+        android:id="@+id/contHorizontal"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="184dp"
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <!-- Contenedor para el FragmentoLauncher -->
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/launcherFragmentContainer"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:defaultNavHost="true"
-            android:name="com.example.onepiece.FragmentoLauncher" />
 
-        <!-- Contenedor para el FragmentoInfo -->
         <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/infoFragmentContainer"
-            android:layout_width="0dp"
+            android:id="@+id/fragmentContainerViewLauncher"
+            android:name="com.example.onepiece.FragmentoLauncher"
+            android:layout_width="30dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            tools:layout="@layout/fragment_fragmento_launcher" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerViewInfo"
             android:name="com.example.onepiece.FragmentoInfo"
-            android:visibility="gone" /> <!-- Inicialmente oculto -->
-
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_fragmento_info" />
     </LinearLayout>
 
-    <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menuInferior"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/menu_inferior" />
+
 </LinearLayout>

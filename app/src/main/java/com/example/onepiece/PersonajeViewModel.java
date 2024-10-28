@@ -1,11 +1,9 @@
 package com.example.onepiece;
 
 import android.util.Log;
-
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
-
 import java.util.ArrayList;
 
 public class PersonajeViewModel extends ViewModel {
@@ -14,10 +12,10 @@ public class PersonajeViewModel extends ViewModel {
     private final MutableLiveData<Personaje> personajeSeleccionado = new MutableLiveData<>();
     private final MutableLiveData<ArrayList<Personaje>> listaFavoritos = new MutableLiveData<>(new ArrayList<>());
 
+
     public void seleccionarPersonaje(Personaje personaje){
         personajeSeleccionado.setValue(personaje);
         debeNavegar.setValue(true); // Indica que se debe navegar
-
     }
 
     public LiveData<Personaje>getPersonajeSeleccionado(){

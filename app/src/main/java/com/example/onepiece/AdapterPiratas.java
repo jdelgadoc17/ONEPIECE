@@ -1,6 +1,7 @@
 package com.example.onepiece;
-import com.bumptech.glide.Glide;
 
+import android.content.res.Configuration;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,9 +50,20 @@ public class AdapterPiratas extends RecyclerView.Adapter<AdapterPiratas.InfoView
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                personajeViewModel.seleccionarPersonaje(personaje); // Asigna el personaje seleccionado
-                NavController navController = Navigation.findNavController(view);
-                navController.navigate(R.id.fragmentoInfo); // Navegar al fragmento de info
+                //controlar orientacion
+                boolean isVertical = holder.itemView.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT;
+
+                if(isVertical){
+                    personajeViewModel.seleccionarPersonaje(personaje); // Asigna el personaje seleccionado
+                    NavController navController = Navigation.findNavController(view);
+                    navController.navigate(R.id.fragmentoInfo); // Navegar al fragmento de info
+
+                }else{
+                    Log.i("horizontal" , "ENTRA");
+                    personajeViewModel.seleccionarPersonaje(personaje);
+
+                }
+
             }
         });
 
