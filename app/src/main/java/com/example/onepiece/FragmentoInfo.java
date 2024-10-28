@@ -54,9 +54,9 @@ public class FragmentoInfo extends Fragment {
                 // Aquí puedes configurar la vista con los detalles del personaje
                 binding.nombreTextView.setText(personaje.getNombre());
                 if(personaje.getRecompensa()!=0){
-                    binding.recompensaInfo.setText("Recompensa: "+String.valueOf(personaje.getRecompensa()+ " millones de berries"));
+                    binding.recompensaInfo.setText(getString(R.string.recompensa)+String.valueOf(personaje.getRecompensa()+ getString(R.string.millones)));
                 }else{
-                    binding.recompensaInfo.setText("Sin recompensa");
+                    binding.recompensaInfo.setText(getString(R.string.sin_recompensa));
                 }
                 binding.rolInfo.setText(personaje.getRol());
                 binding.descripcionInfo.setText(personaje.getDescripcion());

@@ -73,7 +73,7 @@
 
             // Verificar si la lista está vacía
             if (listaCombinada.isEmpty()) {
-                Toast.makeText(getContext(), "No hay personajes disponibles", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), getString(R.string.no_personajes), Toast.LENGTH_SHORT).show();
                 return;
             }
 

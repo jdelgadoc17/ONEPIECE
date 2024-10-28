@@ -34,9 +34,7 @@ public class PersonajeViewModel extends ViewModel {
         ArrayList<Personaje> favoritos = listaFavoritos.getValue();
         if (favoritos != null) {
             if (favoritos.contains(personaje)) {
-                Log.e("PersonajeViewModel", "Personaje dentro");
                 favoritos.remove(personaje);
-                Log.e("PersonajeViewModel", "Personaje REMOVE");
 
             } else {
                 favoritos.add(personaje);

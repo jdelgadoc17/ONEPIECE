@@ -70,9 +70,9 @@ public class FragmentoFavoritos extends Fragment {
 
 
                 new AlertDialog.Builder(getContext())
-                        .setTitle("Confirmar eliminacion")
-                        .setMessage("¿Estás seguro de que deseas eliminar a " + personajeEliminado.getNombre() + " de tus favoritos?")
-                        .setPositiveButton("Eliminar", new DialogInterface.OnClickListener() {
+                        .setTitle(getString(R.string.confirmar_eliminacion))
+                        .setMessage(getString(R.string.confirmar_eliminacion2) + personajeEliminado.getNombre() + getString(R.string.de_favs))
+                        .setPositiveButton(getString(R.string.eliminar), new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 adapterFavoritos.eliminarFavorito(position);
@@ -80,7 +80,7 @@ public class FragmentoFavoritos extends Fragment {
 
                             }
                         })
-                        .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                        .setNegativeButton(getString(R.string.cancelar), new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 adapterFavoritos.notifyItemChanged(position);

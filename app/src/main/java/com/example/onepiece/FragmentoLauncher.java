@@ -71,28 +71,19 @@ public class FragmentoLauncher extends Fragment {
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
                 switch (position) {
                     case 0:
-                        tab.setText("Piratas");
+                        tab.setText(getString(R.string.piratas));
                         break;
                     case 1:
-                        tab.setText("Marines");
+                        tab.setText(getString(R.string.marines));
                         break;
                     case 2:
-                        tab.setText("Revolucionarios");
+                        tab.setText(getString(R.string.revolucionarios));
                         break;
                 }
             }
         }).attach();
 
-        /*PersonajeViewModel personajeViewModel;
-        personajeViewModel = new ViewModelProvider(requireActivity()).get(PersonajeViewModel.class);
-        personajeViewModel.getPersonajeSeleccionado().observe(getViewLifecycleOwner(), personaje -> {
-            if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-                FragmentManager fragmentManager = getParentFragmentManager();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.infoFragmentContainer, new FragmentoInfo())
-                        .commit();
-            }
-        });*/
+
 
     }//ONVIEWCREATED END
 

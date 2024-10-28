@@ -18,6 +18,8 @@
         android:theme="?attr/actionBarTheme" />
 
     <!-- Layout horizontal para fragmentos en landscape -->
+
+    <!-- Bottom Navigation -->
     <LinearLayout
         android:id="@+id/contHorizontal"
         android:layout_width="match_parent"
@@ -32,7 +34,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            tools:layout="@layout/fragment_fragmento_launcher" />
+            android:backgroundTint="@color/black"
+            tools:layout="@layout/fragment_fragmento_piratas" />
 
         <!-- Contenedor para el fragmento de detalles -->
         <androidx.fragment.app.FragmentContainerView
@@ -44,7 +47,6 @@
             tools:layout="@layout/fragment_fragmento_info" />
     </LinearLayout>
 
-    <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menuInferior"
         android:layout_width="match_parent"
