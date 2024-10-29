@@ -61,6 +61,8 @@ public class AdapterPiratas extends RecyclerView.Adapter<AdapterPiratas.InfoView
                 }else{
                     Log.i("horizontal" , "ENTRA");
                     personajeViewModel.seleccionarPersonaje(personaje);
+                    NavController navController = Navigation.findNavController(view);
+                    navController.navigate(R.id.fragmentoInfo);
 
                 }
 
