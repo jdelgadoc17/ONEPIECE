@@ -1,5 +1,6 @@
 package com.example.onepiece;
 
+import android.content.res.Configuration;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         //TOOLBAR
         Toolbar toolbar = binding.toolbar;
         setSupportActionBar(toolbar);
-        toolbar.setTitle("ONE PIECE");
+        toolbar.setTitle(getString(R.string.app_name));
         toolbar.setTitleTextColor(getResources().getColor(R.color.white));
         toolbar.setBackground(new ColorDrawable(getResources().getColor(R.color.blueOnePiece)));
         //TOOLBAR END
@@ -70,7 +71,10 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        //BARRA INFERIOR END
+        //BARRA INFERIOR ENDç
+
+
+
 
 
 

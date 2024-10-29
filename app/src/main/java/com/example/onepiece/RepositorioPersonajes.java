@@ -9,7 +9,6 @@ public class RepositorioPersonajes {
     public static ArrayList<Personaje> lista_revolucionarios = new ArrayList<Personaje>();
 
     public RepositorioPersonajes() {
-
         if(lista_piratas.isEmpty() || lista_marines.isEmpty() || lista_revolucionarios.isEmpty()){
             // Lista de Piratas
             lista_piratas.add(new Personaje("Monkey D. Luffy", "Pirata", 1500, "Gomu Gomu no Mi", "Capitán de los Piratas de Sombrero de Paja.", R.drawable.img_luffy));
