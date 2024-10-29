@@ -1,6 +1,5 @@
 package com.example.onepiece;
 
-import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -24,52 +23,58 @@ public class FragmentoInfo extends Fragment {
     private PersonajeViewModel personajeViewModel;
 
     public FragmentoInfo() {
-        // Constructor vacío requerido
+        // Required empty public constructor
+    }
+
+
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
         binding = FragmentFragmentoInfoBinding.inflate(getLayoutInflater());
         return binding.getRoot();
     }
 
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        personajeViewModel = new ViewModelProvider(requireActivity()).get(PersonajeViewModel.class);
 
-        // Verifica la orientación del dispositivo
-        int orientation = getResources().getConfiguration().orientation;
+        personajeViewModel = new ViewModelProvider(requireActivity()).get(PersonajeViewModel.class);
 
         personajeViewModel.getPersonajeSeleccionado().observe(getViewLifecycleOwner(), personaje -> {
             if (personaje != null) {
-                if (binding.nombreTextView != null) {
-                    binding.nombreTextView.setText(personaje.getNombre());
+                // Aquí puedes configurar la vista con los detalles del personaje
+                binding.nombreTextView.setText(personaje.getNombre());
+                if(personaje.getRecompensa()!=0){
+                    binding.recompensaInfo.setText("Recompensa: "+String.valueOf(personaje.getRecompensa()+ " millones de berries"));
+                }else{
+                    binding.recompensaInfo.setText("Sin recompensa");
                 }
-                if (orientation == Configuration.ORIENTATION_PORTRAIT && binding.recompensaInfo != null) {
-                    binding.recompensaInfo.setText(personaje.getRecompensa() != 0
-                            ? getString(R.string.recompensa) + personaje.getRecompensa() + getString(R.string.millones)
-                            : getString(R.string.sin_recompensa));
-                }
-                if (binding.rolInfo != null) {
-                    binding.rolInfo.setText(personaje.getRol());
-                }
-                if (binding.descripcionInfo != null && orientation == Configuration.ORIENTATION_PORTRAIT) {
-                    binding.descripcionInfo.setText(personaje.getDescripcion());
-                }
-                if (binding.imgInfo != null) {
-                    binding.imgInfo.setImageResource(personaje.getImage());
-                }
+                binding.rolInfo.setText(personaje.getRol());
+                binding.descripcionInfo.setText(personaje.getDescripcion());
+                binding.imgInfo.setImageResource(personaje.getImage());
             }
         });
 
-        // Configura el botón de regreso solo en portrait
-        if (orientation == Configuration.ORIENTATION_PORTRAIT && binding.buttonBackInfo != null) {
-            binding.buttonBackInfo.setOnClickListener(v -> {
+        binding.buttonBackInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 personajeViewModel.limpiarSeleccion();
                 NavController navController = Navigation.findNavController(view);
                 navController.popBackStack();
-            });
-        }
+                personajeViewModel.limpiarSeleccion();
+
+
+
+            }
+        });
     }
 }
